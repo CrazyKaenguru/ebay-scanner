@@ -2,6 +2,32 @@ const fs = require('fs');
 const axios = require('axios');
 const cheerio = require('cheerio');
 
+//search(["Gtx 1060","","used"],["Mo","Fr"],["06:00","13:00"])
+
+async function search(searchfilters,endDayRange,endTimeRange,maxPrice)
+{
+    
+ await scrapeEBayItems(generateUrl(searchfilters));
+  await  filterItems(endDayRange,endTimeRange);
+ 
+}
+
+function generateUrl(searchfilters)
+{
+   
+   var searchInput= searchfilters[0]
+   var isauction=searchfilters[1]
+   var condition
+    //condition: new/used/refurbished
+    if(searchfilters[2]=="used")
+    {
+        condition=3000;
+    }
+    var url= "https://www.ebay.de/sch/i.html?_nkw="+searchInput.replace(/ /g, '+')+"&rt=nc&LH_Auction=1&LH_ItemCondition="+condition
+    console.log(url)
+ return url
+}
+
 async function scrapeEBayItems(url) {
   try {
     const response = await axios.get(url);
@@ -12,7 +38,8 @@ async function scrapeEBayItems(url) {
     $('li.s-item').each((index, element) => {
       //  console.log(element)
       const title = $(element).find('.s-item__title').text();
-      const price = $(element).find('span.s-item__price').text().trim();
+      var price = $(element).find('span.s-item__price').text().trim().toString().slice(4);
+      price=parseFloat(price.replace(",", "."))
       var shipping = $(element).find('span.s-item__shipping.s-item__logisticsCost').text().trim();
       shipping= parseFloat(shipping.replace(/[^0-9,.]/g, '').replace(',', '.'))
       const end = $(element).find('span.s-item__time-end').text(); 
@@ -30,7 +57,6 @@ async function scrapeEBayItems(url) {
         title,
         price,
         shipping,
-        end,
         endDay,
         endTime,
         itemUrl
@@ -46,22 +72,7 @@ async function scrapeEBayItems(url) {
   }
 }
 
-function generateUrl(searchfilters)
-{
-   
-   var searchInput= searchfilters[0]
-   var isauction=searchfilters[1]
-   var condition
-    //condition: new/used/refurbished
-    if(searchfilters[2]=="used")
-    {
-        condition=3000;
-    }
-    var url= "https://www.ebay.de/sch/i.html?_nkw="+searchInput.replace(/ /g, '+')+"&rt=nc&LH_Auction=1&LH_ItemCondition="+condition
- return url
-}
-
-function filterItems(endDayRange,endTimeRange)
+async function filterItems(endDayRange,endTimeRange)
 {
 
     //processing the parameters
@@ -98,7 +109,7 @@ function filterItems(endDayRange,endTimeRange)
         return checkTimeInMinutes >= startTimeInMinutes && checkTimeInMinutes <= endTimeInMinutes;
       }
       
-    const daysInRange=getDaysBetween(endDayRange)
+    const daysInRange= getDaysBetween(endDayRange)
     console.log(daysInRange)
     fs.readFile('items.json', 'utf8', (err, data) => {
         if (err) {
@@ -112,6 +123,7 @@ function filterItems(endDayRange,endTimeRange)
          
 
           const filteredItems=items.filter(item => daysInRange.includes(item.endDay)&&item.shipping <50&&isTimeBetween(item.endTime) )
+          console.log(filterItems)
           // Save the filtered items to the output fil
           fs.writeFile('filtereditems.json', JSON.stringify(filteredItems, null, 2), 'utf8', (err) => {
             if (err) {
@@ -126,13 +138,5 @@ function filterItems(endDayRange,endTimeRange)
       });
 }
 
+module.exports = search
 
-async function search(searchfilters,endDayRange,endTimeRange,maxPrice)
-{
-   await scrapeEBayItems(generateUrl(searchfilters));
-  await  filterItems(endDayRange,endTimeRange);
-
-
-}
-
-search(["Gtx 970","","used"],["Mo","Sa"],["10:00","12:00"])

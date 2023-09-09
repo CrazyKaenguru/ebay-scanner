@@ -1,20 +1,58 @@
 [
   {
     "title": "Nvidia GTX 970 EVGA mit Wassekühler",
-    "price": "EUR 1,00",
+    "price": 10.5,
     "shipping": 6.5,
-    "end": "(Di, 11:25)",
     "endDay": "Di",
     "endTime": "11:25",
-    "itemUrl": "https://www.ebay.de/itm/335017878334?hash=item4e009f233e%3Ag%3A00gAAOSwl%7E1k61%7E7&amdata=enc%3AAQAIAAAA4BiWnVMexUUVwaCyhoE3zaicGM%2F%2B0rY%2F%2B8tDJo3YZOwX%2FizDfH1P3ExX%2BgsCE8rwDqqN5HkXKW87ucc2exET3B5i9C9caiBiytuw%2BtTjtEns4woIVTB%2BunMKw%2BtDKRhsSQIDeDLrfbv0lMZW9esJyUBr782iZzUl3c1GiRcowaxap0gTqG8jpKaGqeBQSwpvK%2FtyplSKqU9By7QCX3MDb3SqWGmJ%2BcPcKoYN%2FO%2FgnEHWJ5onFQk8KEs9XE4vcptpbNv2nthO4g4aGd4t3GF8nsC01ofZUFQI1lkz1C9CrFgV%7Ctkp%3ABk9SR6zVjubOYg&LH_Auction=1&LH_ItemCondition=3000"
+    "itemUrl": "https://www.ebay.de/itm/335017878334?hash=item4e009f233e%3Ag%3A00gAAOSwl%7E1k61%7E7&amdata=enc%3AAQAIAAAA4BiWnVMexUUVwaCyhoE3zaicGM%2F%2B0rY%2F%2B8tDJo3YZOwX%2FizDfH1P3ExX%2BgsCE8rwDqqN5HkXKW87ucc2exET3B5i9C9caiBiytuw%2BtTjtEns4woIVTB%2BunMKw%2BtDKRhsSbCnKOmIDtEUiJIxtmogoV%2FfRLzOg%2F4McAV3UCfaPa05T92sea0sddIUZU6WDsm3heZz3%2FgDaFzkeq47qWOpwDrg%2BhSg2WARSLT7BPeXCJazq2T1Eb4lbYgI3ikbvnBR4MTCPUm1O1lSvTpUzd4TqhNKjGyLtLDp9Z0LGdBAV868%7Ctkp%3ABk9SR7z68bfPYg&LH_Auction=1&LH_ItemCondition=3000"
+  },
+  {
+    "title": "nvidia geforce gtx 970 4gb",
+    "price": 20.49,
+    "shipping": 6.75,
+    "endDay": "Mi",
+    "endTime": "13:58",
+    "itemUrl": "https://www.ebay.de/itm/175891749080?hash=item28f3f718d8%3Ag%3A4EAAAOSwDKNk-OZ1&amdata=enc%3AAQAIAAAAwNQniSQMdg0wHib%2B%2Be6lE5peb491Rg4wybbdH17o3FoAFMNDeiqPkGWNZ7muJDlPcEX29SjxVISGZv%2BgvPUWBjjf3O3DIrc%2FGBWj5Sjp73iwMIihi3c3NEPwCLz%2FpFbXfTC%2BcHIrK3nZE28Bl0E7Txdna6tYcbanaAj19M8iEoF3iJHDIjFF9%2BpXDzW7iMcu4beCV6T9VqcIILjK%2F8MSG6TCOyNHwBX3miXOGW4Sl5AO%2B7UEi3PDPrYCNd9yw%2BheQw%3D%3D%7Ctkp%3ABk9SR7768bfPYg&LH_Auction=1&LH_ItemCondition=3000"
+  },
+  {
+    "title": "Gigabyte Nvidia GTX970 Windforce 4GB GDDR5 Grafikkarte",
+    "price": 1.4,
+    "shipping": 0.15,
+    "endDay": "Mi",
+    "endTime": "07:51",
+    "itemUrl": "https://www.ebay.de/itm/126081670627?hash=item1d5b0d9de3%3Ag%3ARHsAAOSw0EFk-JBt&amdata=enc%3AAQAIAAAAwG4no6uVKQKL4oaNJuTgEWAPVkc8L7cmw5s%2BaScIiydbBUgWYPXsEZA3shbXLJX7SdY6yVJeTWImIKjQcTzYaE%2Fhft9i%2Fmx3cnCbTGNFejvixqjyvDn4bcMlnSU1lxzCy7kxrsu7j5TLs7hn7tNrSpife0le9IAvCxbn0nar%2FRO3ivQcIN5AnGwZVFUfiq%2BZbpwuYdszq%2Bn0u3h6aLcLNPB9ebe%2Ft%2B7kM3QVEpuFybRg%2FU4Pk973XwwMpQicYi256g%3D%3D%7Ctkp%3ABk9SR7768bfPYg&LH_Auction=1&LH_ItemCondition=3000"
+  },
+  {
+    "title": "Nvidia GTDX 970 Grafikkarte GPU 4GB GDDR5 RAM",
+    "price": 29.13,
+    "shipping": 20.8,
+    "endDay": "Mo",
+    "endTime": "12:28",
+    "itemUrl": "https://www.ebay.de/itm/155754536206?hash=item2443b19d0e%3Ag%3APy8AAOSwypNk9i2M&amdata=enc%3AAQAIAAAA4IDWQokJbKUBwJtg57lefNJKMzLGlxRQ%2BXhTq%2FoXbzvo%2B2aS4Hb4XXdyZ%2FsxUq%2BTRETi%2BiqWLgtXdVZAO1iL31AYcO0bgUrh%2Bjk042lVGMTOzAXwPm8wXPHLGuGAr7a24p5D2bMrYjr18TwsY8Ykggmi%2BduTbOGC%2Fw1%2FswZhHZ3OD%2FszjmFh%2Biw7%2BDRnyXluEQP9IRjU0sHb%2FliwFBD%2BHV8Znb6IttWObpkFqNcxL%2BxukHARwG6xdSuWuWWOCczc%2FqfTLq8GMHZlIkAgAMbESlPANZj81yWJTTGgE1KO2Dkv%7Ctkp%3ABk9SR7768bfPYg&LH_Auction=1&LH_ItemCondition=3000"
+  },
+  {
+    "title": "GIGABYTE GeForce Windforce GTX 980 OC 4GB GDDR5 Scheda Video (GV-N980OC-4GD)",
+    "price": 80,
+    "shipping": 20,
+    "endDay": "Do",
+    "endTime": "08:36",
+    "itemUrl": "https://www.ebay.de/itm/134718595371?epid=9003300287&hash=item1f5ddaa12b%3Ag%3AgvMAAOSwsLxkkXbG&amdata=enc%3AAQAIAAAA4BXXRCEdW4bseZl3yxgjuh40uLhwPdaWVWC2aMREuBm5TApa8hJY3tyFI8XRcpie%2BfUbdHCh4xs3nRL4qup26Q43EEZ%2BWFO55N2CYanzbh%2F4EyVK2jzFEW0Rrm%2BfK2oKXUW9yuSOXhI3bTpwqE0JUSpk5JgRYcax%2FWoE%2FCax4nh8ZsqkHL6W%2FmonUzuezVfK0Xdtb%2Bv8W0FDWzvp%2FT0eV2AXIOt7%2FmMmZDeK%2FaGxVFXymhCFhqwLvA5Rn0y6frncHiKvGFdTin%2FrG9ODQZDZcM2V10JTyl8wUTtHeLntfbHE%7Ctkp%3ABk9SR7768bfPYg&LH_Auction=1&LH_ItemCondition=3000"
+  },
+  {
+    "title": "MSI Geforce GTX 970 GAMING 100 MILLION EDITION 4GB GDDR5 Graphics Card (Green)",
+    "price": 171.12,
+    "shipping": 24.62,
+    "endDay": "Mi",
+    "endTime": "09:00",
+    "itemUrl": "https://www.ebay.de/itm/186067605382?epid=220481929&hash=item2b527e5786%3Ag%3AkFAAAOSw%7E5hk5D5N&amdata=enc%3AAQAIAAAA4Ew%2FZdEiAxkRWKWtv5dO7ADwDVKka8n592eQ7REqVukTukrCv80Ju%2FHB2Uh0RRUIAFQ9wof9kFFbiHvkuh8XLn6vfJ0es1m3Krh%2BhgjKudNDkcNUoNdWeaZYbDDvAYb379Ob2rCIq7NtTCGRAYM3ebsIWVDVj2eoq4eMR%2FfeduaHXikxcs%2FRjIljk%2FEL80mE%2F0Mj%2BjALEymH2qJS3kp0%2B8w3iKh7vgktDS70ZIO0aD4qPmGD3bTo4egLtejAP17dwOsf062NnVPd%2Bt0gGtPC7y7iFYiByMIzu0erP9x5Vb4C%7Ctkp%3ABk9SR8D68bfPYg&LH_Auction=1&LH_ItemCondition=3000"
   },
   {
     "title": "EVGA GeForce GTX 980 SC Gaming ACX 2.0 (04G-P4-2983-KR)",
-    "price": "EUR 90,00",
+    "price": 90,
     "shipping": 6.99,
-    "end": "(Di, 10:40)",
     "endDay": "Di",
     "endTime": "10:40",
-    "itemUrl": "https://www.ebay.de/itm/285461443086?hash=item4276d3f20e%3Ag%3AIVcAAOSwijVkc29F&amdata=enc%3AAQAIAAAAwNolU%2FVtzAOJ4D%2BDWM1o%2BL82JlDN399NMPHQnCJlZtRaX4kLNyQGmyGeLopFmfI7EaOh9k5k%2BtYiGw0CA7RXDFksJISAj8J9j74ioJEDJHPeCIon49z%2FLdrmxhtj7QP%2BBq8iWQcOSKX1IvGPloFrky9ztGyNE%2BIcPDVADkxNg9AC%2Fad4S1dDKvHpcs%2FTpq0C%2F1D9tJMbUZeVqGv0sJmTpjfbZ%2B%2BQEBaKxq4XVx5m%2Bt%2BBlRuwqQE3pKofEnK%2Fv4jQzQ%3D%3D%7Ctkp%3ABk9SR67VjubOYg&LH_Auction=1&LH_ItemCondition=3000"
+    "itemUrl": "https://www.ebay.de/itm/285461443086?hash=item4276d3f20e%3Ag%3AIVcAAOSwijVkc29F&amdata=enc%3AAQAIAAAAwNolU%2FVtzAOJ4D%2BDWM1o%2BL82JlDN399NMPHQnCJlZtRaX4kLNyQGmyGeLopFmfI7Eaucy4BVba%2BpWeP9d%2FmEoTSibUbAOF%2Ftow46a7fS9QmZak%2FY7nXQ5uVcyz8UeS1IAyOYpw%2BhbUBPw2c5t%2FOsepG367QgDZdMgQ2knlVI79Cd%2BPBwntD1m7EH46e5k6nuU8HTmB9oxNquiXcGksLx7KdTdIIOcxA5fEppQq0l7q0fQun6Rs%2FPbQ%2FiZTxm%2FzOigA%3D%3D%7Ctkp%3ABk9SR7768bfPYg&LH_Auction=1&LH_ItemCondition=3000"
   }
 ]

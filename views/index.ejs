@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Include Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Style to display form elements on a single line */
+    label,
+    input {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cookie Form</h1>
+  <form id="myForm">
+    <label for="keyword">Keyword:</label>
+    <input type="text" id="keyword" name="keyword">
+
+    <label for="condition">Condition:</label>
+    <input type="text" id="condition" name="condition">
+
+    <label for="startDay">Start Day:</label>
+    <input type="text" id="startDay" name="startDay">
+
+    <label for="endDay">End Day:</label>
+    <input type="text" id="endDay" name="endDay">
+
+    <label for="startTime">Start Time:</label>
+    <input type="text" id="startTime" name="startTime">
+
+    <label for="endTime">End Time:</label>
+    <input type="text" id="endTime" name="endTime">
+
+    <label for="max total Price">max total price</label>
+    <input type="text" id="maxTotalPrice" name="maxTotalPrice">
+
+    <button type="submit">Submit</button>
+  </form>
+  <div class="container mt-4">
+    <div class="row" id="cardContainer">
+      <!-- Cards will be appended here -->
+    </div>
+  </div>
+
+  <script>
+    // Sample JSON data
+    const jsonData = [
+      {
+        "title": "Nvidia GTX 970 EVGA mit Wassekühler",
+        "price": "EUR 10,50",
+        "shipping": 6.5,
+        "endDay": "Di",
+        "endTime": "11:25",
+        "itemUrl": "https://www.ebay.de/itm/335017878334?hash=item4e009f233e%3Ag%3A00gAAOSwl%7E1k61%7E7&amdata=enc%3AAQAIAAAAwGPPwv1C639nHefXkYCayZ%2FpXfo509ecQ%2Fm2SvLlvWBbrNWsBL3DxfaDJxGQiwTdcysQxwKFjAILOPZ8FlniZNKaTbooxN%2FBRVdAA1%2FneQjjfLUgxOHFIZsQXS9Op3Rb2GIR%2Bn27FuYLa%2FkjExofpllME0NFvz1o9jQ8fotbXIGSAeYkInWN%2BkXDeuFnLsQY7%2BLqWsCiRMlp5tcdzZ2zGCm4Sn6%2BK7Zkl59u2RMYxfbpNo7mJ7wSbmYir1TkUkZ1AA%3D%3D%7Ctkp%3ABk9SR9bz7rXPYg&LH_Auction=1&LH_ItemCondition=undefined"
+      },
+      {
+        "title": "MSI GeForce GTX 970 GAMING 4G ( GTX 970 Gaming 4G )*Für Ersatzteil DEFEKT#L59",
+        "price": "EUR 7,50",
+        "shipping": 5.5,
+        "endDay": "Mo",
+        "endTime": "07:54",
+        "itemUrl": "https://www.ebay.de/itm/394851689921?hash=item5beefea5c1%3Ag%3AdzMAAOSw71hk8frv&amdata=enc%3AAQAIAAAA4KjgMS78Tru5SC%2FPPVF%2BDbPcxDCC8PpHXOPDirAsn0bdBVL7rbOWQ738MNyy4uhZhU0rs75cJeU06EJJ8II95evhXjzWpNUr9MEPw6CJ7t8FESiuLtMECQzzhekgES3KRoyWs8zkKp%2FupkoCcGjGLZBXkTbLygD%2Fo2q%2BC0kv33IK4EoE6sbW7qyGXjAKAzjhxBgP7MduqySCdQ0jcA2boDqL8c3nd6gLxhOCAxmR0FLcuCJDMKSGsr%2BTceIguYJZd7SPVJPCGxHo7C1F%2BcaOkfyGFW%2BN01PBqBn1qSWKL1NC%7Ctkp%3ABk9SR9jz7rXPYg&LH_Auction=1&LH_ItemCondition=undefined"
+      },
+      // Add more JSON data items here
+    ];
+
+    // Get the card container element
+    const cardContainer = document.getElementById('cardContainer');
+
+    // Function to create a Bootstrap card element
+    function createCard(item) {
+      const card = document.createElement('div');
+      card.className = 'col-md-4 mb-3'; // Adjust the column width as needed
+
+      card.innerHTML = `
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">${item.title}</h5>
+            <p class="card-text">Price: ${item.price}</p>
+            <p class="card-text">Shipping: ${item.shipping}</p>
+            <p class="card-text">Ends: ${item.endDay} at ${item.endTime}</p>
+            <a href="${item.itemUrl}" target="_blank" class="btn btn-primary">View Item</a>
+            <h5 class="card-title">Total: ${item.price+item.shipping}</h5>
+          </div>
+        </div>
+      `;
+
+      return card;
+    }
+
+    // Loop through the JSON data and create cards
+   
+  
+    // Function to set a cookie
+    function setCookie(name, value, days) {
+      const expires = new Date();
+      expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+      document.cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+    }
+
+    // Function to get a cookie by name
+    function getCookie(name) {
+      const cookies = document.cookie.split('; ');
+      for (const cookie of cookies) {
+        const [cookieName, cookieValue] = cookie.split('=');
+        if (cookieName === name) {
+          return cookieValue;
+        }
+      }
+      return null;
+    }
+
+    // Function to populate form fields from cookies
+    function populateFormFields() {
+      document.getElementById('keyword').value = getCookie('keyword') || '';
+      document.getElementById('condition').value = getCookie('condition') || '';
+      document.getElementById('startDay').value = getCookie('startDay') || '';
+      document.getElementById('endDay').value = getCookie('endDay') || '';
+      document.getElementById('startTime').value = getCookie('startTime') || '';
+      document.getElementById('endTime').value = getCookie('endTime') || '';
+      document.getElementById('maxTotalPrice').value = getCookie('maxTotalPrice') || '';
+    }
+
+    // Call the function to populate form fields on page load
+    populateFormFields();
+
+    // Function to handle form submission
+    document.getElementById('myForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const keyword = document.getElementById('keyword').value;
+      const condition = document.getElementById('condition').value;
+      const startDay = document.getElementById('startDay').value;
+      const endDay = document.getElementById('endDay').value;
+      const startTime = document.getElementById('startTime').value;
+      const endTime = document.getElementById('endTime').value;
+      const maxTotalPrice = document.getElementById('maxTotalPrice').value;
+
+      // Store user inputs in cookies
+      setCookie('keyword', keyword, 30); // Cookie expires in 30 days
+      setCookie('condition', condition, 30); // Cookie expires in 30 days
+      setCookie('startDay', startDay, 30); // Cookie expires in 30 days
+      setCookie('endDay', endDay, 30); // Cookie expires in 30 days
+      setCookie('startTime', startTime, 30); // Cookie expires in 30 days
+      setCookie('endTime', endTime, 30); // Cookie expires in 30 days
+      setCookie('maxTotalPrice', maxTotalPrice, 30); // Cookie expires in 30 days
+
+      const url = `/api/search?keyword=${encodeURIComponent(keyword)}&condition=${encodeURIComponent(condition)}&startDay=${encodeURIComponent(startDay)}&endDay=${encodeURIComponent(endDay)}&startTime=${encodeURIComponent(startTime)}&endTime=${encodeURIComponent(endTime)}`;
+
+// Perform the GET request
+fetch(url)
+  .then(response => response.text())
+  .then(data => {
+
+    //clear all containers
+    const cardContainer = document.getElementById('cardContainer');
+cardContainer.innerHTML = '';
+    console.log(data); // You can handle the response data here
+    //check if there is any item below the max price limit
+    var abovepricelimit=0;
+  JSON.parse(data).forEach((item) => {
+    if(item.shipping+item.price<=maxTotalPrice)
+    {
+      const card = createCard(item);
+      cardContainer.appendChild(card);
+    }
+    else
+    {
+      abovepricelimit++;
+    }
+    });
+    if(abovepricelimit==data.length)
+    {
+        alert("no items found fot that price limit")
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+});
+   
+  </script>
+</body>
+</html>
